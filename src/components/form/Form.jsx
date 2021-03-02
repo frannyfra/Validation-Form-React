@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormInput from "./../../components/form/formInput/FormInput";
 import Button from "./../button/Button";
 import UserCardInfo from "./../user-card-info/UserCardInfo";
+import SubmitMessage from "./../submit-message/SubmitMessage";
 
 import { ageChecker } from "./../../utilities/ageChecker";
 import { emailValidation } from "../../utilities/emailValidation";
@@ -168,9 +169,6 @@ const Form = () => {
           placeholder="Enter phone number"
           value={value}
         />
-        <span className="react-span">
-          Enter your date of Birth* - dd/mm/yyy
-        </span>
         {checked && value === undefined && validValue === false ? (
           <span>Please enter a phone number</span>
         ) : checked && value !== undefined && validValue === false ? (
@@ -200,6 +198,9 @@ const Form = () => {
           selected={startDate}
           showYearDropdown
         />
+        <span className="react-span">
+          Enter your date of Birth* - dd/mm/yyy
+        </span>
         {userInput.dateOfBirth === startDate ? (
           <span>Birthday date must be different from today date</span>
         ) : null}
@@ -215,6 +216,12 @@ const Form = () => {
           />
         </div>
       ) : null}
+      <SubmitMessage
+        age={userAge}
+        dateOfBirth={userInput.dateOfBirth}
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+      ></SubmitMessage>
     </div>
   );
 };
