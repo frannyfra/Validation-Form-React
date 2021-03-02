@@ -1,6 +1,7 @@
 # React Form with Validation - React Hooks 
 
-![](https://i.imgur.com/hcX0NFT.png)
+!![Screenshot from 2021-03-02 22-41-19](https://user-images.githubusercontent.com/46782373/109725229-be28d000-7ba8-11eb-9845-6c60535b0607.png)
+[](https://i.imgur.com/hcX0NFT.png)
 
 
 
@@ -30,6 +31,11 @@ The submit form will trigger an age check which will end up with a **successful 
 
 A popup message will show the message for the user.
 
+### The architecture of the app
+
+The form is composed from different components. The idea behind is to modularize the app and creat components which can be easily reused.
+
+![](https://i.imgur.com/PyBRHdK.png)
 
 ### Steps 
 
@@ -40,3 +46,13 @@ The project has been created using the command **npx create-react-app my-app** w
 The form has been styled using **Less**.
 
 
+---
+
+
+Here' s the link for the deployed form:
+
+*https://frannyfra.github.io/Validation-Form-React/*
+
+Alternatively clone it locally and run: `npm install` and after `npm start`
+
+**Have fun!!!**
