@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# React Form with Validation - React Hooks 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](https://i.imgur.com/hcX0NFT.png)
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+## About the form
+The form contains five inputs field where user can type a name, surname, email, telephone number and date of birth.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The **form validation** is manual and the logic is built using JavaScript and React, no external libraries have been used for validation, a part from **react-phone-number-input** which has been implemented for international phone validation.
+I also have used **React Date Picker**, a simple and reusable Datepicker component for React which offer an easy and tasteful calendar used by the user in order to select a birth date.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### The structure of the app
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app has been built in **two steps logic**.
 
-### `npm run build`
+On the first step there could be different scenarios.
+1. the user **does not fill up** the input fields and press the check button, in this case an error message will appear and remind that the fields are required;
+2. the user **fill up the form but wrongly**, therefore the validation is not successful, in this case the user will get an error message related to the field that has not be filled correctly;
+3. the user fill up correctly the form;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The validation is made against a logic built using Regex patterns for email, name and surname. Phone is validated with the library.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+On the first two scenarios the user will not be able to proceede till all the inputs are filled and correct, in the third case, when the user press the check button it will appear a resume of all the information that have been given.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+At this stage the user can read the informations and if happy can finally submit the form.
 
-### `npm run eject`
+The submit form will trigger an age check which will end up with a **successful submition** if the user age is between 18 and 99 and (unfortunately) **unsuccessful** if the user is younger than 18.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+A popup message will show the message for the user.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Steps 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The project has been created using the command **npx create-react-app my-app** which creates a frontend build pipeline and under the hood, it uses Babel and webpack. It doesn’t handle backend logic or database but it is possible to add them to it.
 
-## Learn More
+**React-numeric-input** and **react-datepicker** have been install with Node Package Manager.
+ 
+The form has been styled using **Less**.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
