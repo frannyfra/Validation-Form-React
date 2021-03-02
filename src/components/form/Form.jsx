@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import FormInput from "./../../components/form/formInput/FormInput";
 import Button from "./../button/Button";
 
+import { ageChecker } from "./../../utilities/ageChecker";
+import { emailValidation } from "../../utilities/emailValidation";
+import { getUserAge, getDateOfBirth } from "../../utilities/datePicker";
+import { textValidation } from "../../utilities/textValidation";
+
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 const Form = () => {
   const [userInput, setUserInput] = useState({
     name: "",
@@ -9,6 +17,12 @@ const Form = () => {
     email: "",
     dateOfBirth: ""
   });
+
+  // dataPicker && age status
+  const [startDate, setStartDate] = useState(new Date());
+  const [userAge, setUserAge] = useState();
+  const today = new Date();
+  const minumDateTimeStamp = new Date().setDate(today.getDate() - 36135);
 
   const handleBirthdayInput = () => {};
 
@@ -49,6 +63,16 @@ const Form = () => {
           placeholder="Email"
           type="email"
           value={userInput.email}
+        />
+        <DatePicker
+          dateFormat="dd/MM/yyy"
+          isClearable
+          minDate={new Date(minumDateTimeStamp)}
+          maxDate={new Date()}
+          onChange={handleBirthdayInput}
+          scrollableMonthYearDropdown
+          selected={startDate}
+          showYearDropdown
         />
         <Button
           className="submit-button"
