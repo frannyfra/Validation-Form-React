@@ -216,12 +216,14 @@ const Form = () => {
           />
         </div>
       ) : null}
-      <SubmitMessage
-        age={userAge}
-        dateOfBirth={userInput.dateOfBirth}
-        open={isOpen}
-        onClose={() => setIsOpen(false)}
-      ></SubmitMessage>
+      {submitted ? (
+        <SubmitMessage
+          age={userAge}
+          dateOfBirth={userInput.dateOfBirth}
+          open={isOpen}
+          onClose={() => setIsOpen(false)}
+        />
+      ) : null}
     </div>
   );
 };
