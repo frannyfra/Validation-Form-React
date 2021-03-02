@@ -22,7 +22,7 @@ On the first step there could be different scenarios.
 
 The validation is made against a logic built using Regex patterns for email, name and surname. Phone is validated with the library.
 
-On the first two scenarios the user will not be able to proceede till all the inputs are filled and correct, in the third case, when the user press the check button it will appear a resume of all the information that have been given.
+On the first two scenarios the user will not be able to proceed further and visualize the resume info card till all the inputs are filled and correct, in the third case, when the user press the check button it will appear a resume of all the information that the user typed inside the input fields.
 
 At this stage the user can read the informations and if happy can finally submit the form.
 
