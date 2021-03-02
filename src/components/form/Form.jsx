@@ -168,6 +168,9 @@ const Form = () => {
           placeholder="Enter phone number"
           value={value}
         />
+        <span className="react-span">
+          Enter your date of Birth* - dd/mm/yyy
+        </span>
         {checked && value === undefined && validValue === false ? (
           <span>Please enter a phone number</span>
         ) : checked && value !== undefined && validValue === false ? (
