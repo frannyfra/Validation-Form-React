@@ -1,7 +1,8 @@
 {
-  "watchFolder": "src/",
-  "outputFolder": "src/",
-  "sourceMap": true,
+  "watchFolder": "src/less",
+  "outputFolder": "src/css",
+  "mainFile": "main.less",
+  "sourceMap": false,
   "runOnce": false,
   "enableJs": true
 }
