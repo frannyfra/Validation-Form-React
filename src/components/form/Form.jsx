@@ -10,6 +10,14 @@ import { textValidation } from "../../utilities/textValidation";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
+import PhoneInput, {
+    isValidPhoneNumber,
+    formatPhoneNumberIntl
+} from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+
+
+
 const Form = () => {
   const [userInput, setUserInput] = useState({
     name: "",
