@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormInput from "./../../components/form/formInput/FormInput";
 
 const Form = () => {
   const [userInput, setUserInput] = useState({
@@ -27,21 +28,21 @@ const Form = () => {
   return (
     <div className="main-container">
       <form className="form-container" autoComplete="off">
-        <input
+        <FormInput
           name="name"
           onChange={handleOnChange}
           placeholder="Name"
           type="text"
           value={userInput.name}
         />
-        <input
+        <FormInput
           name="surname"
           onChange={handleOnChange}
           placeholder="Surname"
           type="text"
           value={userInput.surname}
         />
-        <input
+        <FormInput
           name="email"
           onChange={handleOnChange}
           placeholder="Email"
