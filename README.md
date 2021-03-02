@@ -31,7 +31,7 @@ A popup message will show the message for the user.
 
 ### The architecture of the app
 
-The form is composed from different components. The idea behind is to modularize the app and creat components which can be easily reused.
+The form is made of different components. The idea behind is to modularize the app and create components which can be easily reused.
 
 ![](https://i.imgur.com/PyBRHdK.png)
 
