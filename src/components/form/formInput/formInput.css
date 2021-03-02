@@ -76,6 +76,7 @@ p {
   }
   body h1 {
     padding-top: 2rem;
+    font-size: 4rem;
   }
 }
 .form-input-container {
