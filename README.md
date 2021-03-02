@@ -1,8 +1,6 @@
 # React Form with Validation - React Hooks 
 
-!![Screenshot from 2021-03-02 22-41-19](https://user-images.githubusercontent.com/46782373/109725229-be28d000-7ba8-11eb-9845-6c60535b0607.png)
-[](https://i.imgur.com/hcX0NFT.png)
-
+![](https://i.imgur.com/hcX0NFT.png)
 
 
 ## About the form
