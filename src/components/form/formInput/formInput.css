@@ -1,0 +1,48 @@
+/* $gradient: linear-gradient(to right, blue, indigo, violet); */
+.form-input-container {
+  /* align-self: center; */
+  background: red;
+  margin: 1em 1.5em;
+}
+input {
+  height: 2em;
+  width: 100%;
+  border: none;
+  border-bottom: 0.2em solid #b3b3cc;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+input:focus {
+  border-image: linear-gradient(to left, #00ccff, #cc33ff) 1;
+  border-bottom: 0.3em solid;
+}
+::placeholder {
+  font-family: "Poppins", sans-serif;
+  color: #999999;
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 1;
+  /* Firefox */
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: "Poppins", sans-serif;
+  color: #999999;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: "Poppins", sans-serif;
+  color: #999999;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+    .form-input-container {
+      margin: auto;
+      align-self: center;
+    }
+  } */
+/*# sourceMappingURL=formInput.css.map */
