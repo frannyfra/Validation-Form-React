@@ -48,7 +48,7 @@ const Form = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleBirthdayInput = (event) => {
+  const handleBirthdayInput = event => {
     setStartDate(event);
     const age = getUserAge(event);
     setUserAge(age);
@@ -60,7 +60,7 @@ const Form = () => {
     }));
   };
 
-  const handleOnChange = (event) => {
+  const handleOnChange = event => {
     const value = event.target.value;
     setUserInput({
       ...userInput,
@@ -79,7 +79,7 @@ const Form = () => {
     }));
   };
 
-  const handlePhoneInput = (event) => {
+  const handlePhoneInput = event => {
     console.log(event);
     const formatNumber = formatPhoneNumberIntl(event);
     console.log(formatNumber);
@@ -90,7 +90,7 @@ const Form = () => {
     setValidValue(checkValidNumber);
   };
 
-  const handleCheck = (event) => {
+  const handleCheck = event => {
     event.preventDefault();
 
     if (
@@ -142,6 +142,11 @@ const Form = () => {
           type="text"
           value={userInput.name}
         />
+        {checked && userInput.name === "" ? (
+          <span> Required field</span>
+        ) : (
+          <span>{errorMessage.name}</span>
+        )}
         <FormInput
           name="surname"
           onChange={handleOnChange}
@@ -149,6 +154,11 @@ const Form = () => {
           type="text"
           value={userInput.surname}
         />
+        {checked && !userInput.surname ? (
+          <span> Required field</span>
+        ) : (
+          <span>{errorMessage.surname}</span>
+        )}
         <PhoneInput
           className="phoneInput"
           international={false}
@@ -158,6 +168,13 @@ const Form = () => {
           placeholder="Enter phone number"
           value={value}
         />
+        {checked && value === undefined && validValue === false ? (
+          <span>Please enter a phone number</span>
+        ) : checked && value !== undefined && validValue === false ? (
+          <span>Invalid phone number</span>
+        ) : (
+          undefined
+        )}
         <FormInput
           name="email"
           onChange={handleOnChange}
@@ -165,6 +182,11 @@ const Form = () => {
           type="email"
           value={userInput.email}
         />
+        {checked && !userInput.email ? (
+          <span> Required field</span>
+        ) : (
+          <span>{errorMessage.email}</span>
+        )}
         <DatePicker
           dateFormat="dd/MM/yyy"
           isClearable
@@ -175,6 +197,9 @@ const Form = () => {
           selected={startDate}
           showYearDropdown
         />
+        {userInput.dateOfBirth === startDate ? (
+          <span>Birthday date must be different from today date</span>
+        ) : null}
         <Button onClick={handleCheck} name="Confirm" />
       </form>
       <div className="user-info-card-display">
