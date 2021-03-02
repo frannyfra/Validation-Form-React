@@ -10,7 +10,7 @@ The form contains five inputs field where user can type a name, surname, email, 
 The **form validation** is manual and the logic is built using JavaScript and React, no external libraries have been used for validation, a part from **react-phone-number-input** which has been implemented for international phone validation.
 I also have used **React Date Picker**, a simple and reusable Datepicker component for React which offer an easy and tasteful calendar used by the user in order to select a birth date.
 
-### The structure of the app
+### The logic of the app
 
 
 The app has been built in **two steps logic**.
