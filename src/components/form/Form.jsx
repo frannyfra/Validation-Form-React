@@ -205,14 +205,16 @@ const Form = () => {
         ) : null}
         <Button onClick={handleCheck} name="Confirm" />
       </form>
-      <div className="user-info-card-display">
-        <UserCardInfo userInfo={userInfo} phoneNumber={value} />
-        <Button
-          className="submit-button"
-          name="Submit"
-          onClick={handleSubmit}
-        />
-      </div>
+      {valid && checked ? (
+        <div className="user-info-card-display">
+          <UserCardInfo userInfo={userInfo} phoneNumber={value} />
+          <Button
+            className="submit-button"
+            name="Submit"
+            onClick={handleSubmit}
+          />
+        </div>
+      ) : null}
     </div>
   );
 };
