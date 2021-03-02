@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FormInput from "./../../components/form/formInput/FormInput";
+import Button from "./../button/Button";
 
 const Form = () => {
   const [userInput, setUserInput] = useState({
@@ -49,7 +50,7 @@ const Form = () => {
           type="email"
           value={userInput.email}
         />
-        <button
+        <Button
           className="submit-button"
           name="Submit"
           onClick={handleSubmit}
