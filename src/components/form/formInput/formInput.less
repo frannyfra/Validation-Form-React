@@ -14,12 +14,47 @@
       border-image: @gradient-color;
       border-bottom: 0.3em solid;
 
+      :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        font-family: "Poppins", sans-serif;
+        color: @color-grey;
+        font-size: 0.9rem;
+        font-weight: @font-regular;
+      }
+
+      ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        font-family: "Poppins", sans-serif;
+        color: @color-grey;
+        font-size: 0.9rem;
+        font-weight: @font-regular;
+      }
+
       ::placeholder {
         font-family: "Poppins", sans-serif;
         color: @color-grey;
         font-size: 0.9rem;
         font-weight: @font-regular;
         opacity: 1; /* Firefox */
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .form-input-container {
+    margin: 1em 1.5em;
+
+    input {
+      height: @size-1em + @size-1em;
+      width: 100%;
+      border: none;
+      border-bottom: 0.2em solid @color-second;
+      outline: none;
+      font-family: "Poppins", sans-serif;
+      &:focus {
+        border-image: @gradient-color;
+        border-bottom: 0.3em solid;
 
         :-ms-input-placeholder {
           /* Internet Explorer 10-11 */
@@ -35,6 +70,14 @@
           color: @color-grey;
           font-size: 0.9rem;
           font-weight: @font-regular;
+        }
+
+        ::placeholder {
+          font-family: "Poppins", sans-serif;
+          color: @color-grey;
+          font-size: 0.9rem;
+          font-weight: @font-regular;
+          opacity: 1; /* Firefox */
         }
       }
     }

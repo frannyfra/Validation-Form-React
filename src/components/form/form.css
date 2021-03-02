@@ -68,6 +68,13 @@ h1 {
 p {
   font-weight: 300;
 }
+@media screen and (min-width: 800px) {
+  body {
+    background-color: #00ccff;
+    display: flex;
+    flex-direction: column;
+  }
+}
 .main-container {
   display: flex;
   flex-direction: column;
@@ -85,22 +92,34 @@ p {
   padding-left: 2.5em;
   font-family: "Poppins", sans-serif;
 }
-.main-container .form-container .user-info-card-display {
+.main-container .form-container div.user-info-card-display {
+  padding: 0;
+  margin: 0;
   display: flex;
+  justify-content: center;
+  align-content: center;
   flex-direction: column;
 }
 .main-container .form-container .submition-message {
   height: 5rem;
 }
-.main-container .phoneInput {
+.main-container .phoneInput.PhoneInput {
   margin: 1em 2em 0.3em 2em;
   height: 2em;
   border: none;
   outline: none;
-  border-bottom: 0.2em solid #b3b3cc;
   font-family: "Poppins", sans-serif;
 }
-.main-container .phoneInput .phoneInput:focus {
+.main-container .phoneInput.PhoneInput input {
+  outline: none;
+  border: none;
+  border-bottom: 0.2em solid #b3b3cc;
+}
+.main-container .phoneInput.PhoneInput input ::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+}
+.main-container .phoneInput.PhoneInput input:focus {
   border-bottom: 0.3em solid;
   border-image: linear-gradient(to left, #00ccff, #cc33ff) 1;
 }
@@ -131,12 +150,9 @@ p {
   margin-top: 20px;
 }
 .main-container span.react-datepicker__year-read-view--down-arrow {
-  color: blue;
+  color: #3333ff;
 }
-.main-container span.react-datepicker__year-read-view--selected-year {
-  padding: 0;
-}
-.main-container span.react-datepicker__year-read-view--down-arrow {
+span.react-datepicker__year-read-view--selected-year .main-container.main-container span.react-datepicker__year-read-view--down-arrow {
   padding: 0;
 }
 .main-container #root > div > div > form > div.react-datepicker__tab-loop > div.react-datepicker-popper > div > div > button.react-datepicker__navigation.react-datepicker__navigation--next {
@@ -151,5 +167,23 @@ p {
 }
 .main-container button.button {
   margin-bottom: 5em;
+}
+@media screen and (min-width: 800px) {
+  .main-container {
+    width: 50rem;
+    align-self: center;
+    justify-content: center;
+  }
+  .main-container .form-container {
+    background-color: #ffffff;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    margin-top: 6rem;
+  }
+  .main-container div.user-info-card-display {
+    background-color: #ffffff;
+  }
 }
 /*# sourceMappingURL=form.css.map */

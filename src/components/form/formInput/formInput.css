@@ -68,6 +68,16 @@ h1 {
 p {
   font-weight: 300;
 }
+@media screen and (min-width: 800px) {
+  body {
+    background-color: #f9e6ff;
+    display: flex;
+    flex-direction: column;
+  }
+  body h1 {
+    padding-top: 2rem;
+  }
+}
 .form-input-container {
   margin: 1em 1.5em;
 }
@@ -83,6 +93,20 @@ p {
   border-image: linear-gradient(to left, #00ccff, #cc33ff) 1;
   border-bottom: 0.3em solid;
 }
+.form-input-container input:focus :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: "Poppins", sans-serif;
+  color: #999999;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.form-input-container input:focus ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: "Poppins", sans-serif;
+  color: #999999;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
 .form-input-container input:focus ::placeholder {
   font-family: "Poppins", sans-serif;
   color: #999999;
@@ -91,18 +115,43 @@ p {
   opacity: 1;
   /* Firefox */
 }
-.form-input-container input:focus ::placeholder :-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  font-family: "Poppins", sans-serif;
-  color: #999999;
-  font-size: 0.9rem;
-  font-weight: 400;
-}
-.form-input-container input:focus ::placeholder ::-ms-input-placeholder {
-  /* Microsoft Edge */
-  font-family: "Poppins", sans-serif;
-  color: #999999;
-  font-size: 0.9rem;
-  font-weight: 400;
+@media screen and (min-width: 800px) {
+  .form-input-container {
+    margin: 1em 1.5em;
+  }
+  .form-input-container input {
+    height: 2em;
+    width: 100%;
+    border: none;
+    border-bottom: 0.2em solid #b3b3cc;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+  }
+  .form-input-container input:focus {
+    border-image: linear-gradient(to left, #00ccff, #cc33ff) 1;
+    border-bottom: 0.3em solid;
+  }
+  .form-input-container input:focus :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-family: "Poppins", sans-serif;
+    color: #999999;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  .form-input-container input:focus ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    font-family: "Poppins", sans-serif;
+    color: #999999;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  .form-input-container input:focus ::placeholder {
+    font-family: "Poppins", sans-serif;
+    color: #999999;
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 1;
+    /* Firefox */
+  }
 }
 /*# sourceMappingURL=formInput.css.map */

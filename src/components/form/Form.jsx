@@ -164,7 +164,6 @@ const Form = () => {
           initialValueFormat="national"
           defaultCountry="GB"
           onChange={handlePhoneInput}
-          placeholder="Enter phone number"
           value={value}
         />
         {checked && value === undefined && validValue === false ? (

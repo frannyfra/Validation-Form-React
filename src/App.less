@@ -3,8 +3,11 @@
 @gradient-color: linear-gradient(to left, #00ccff, #cc33ff) 1;
 @color-first: #3333ff;
 @color-second: #b3b3cc;
+@color-third: #cc33ff;
+@color-forth :#00ccff;
 
 @color-grey:#999999;
+
 @main-text-color: rgb(0, 0, 0);
 @font-extra-light: 200;
 @font-light: 300;
@@ -47,4 +50,16 @@ h1 {
 
 p {
   font-weight: @font-light;
+}
+
+
+@media screen and (min-width: 800px) {
+  body {
+    background-color: rgb(249, 230, 255);
+    display: flex;
+    flex-direction: column;
+h1 {
+  padding-top:2rem;
+}
+  }
 }
