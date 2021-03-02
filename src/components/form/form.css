@@ -73,34 +73,38 @@ p {
   flex-direction: column;
   height: auto;
 }
-.form-container {
+.main-container .form-container {
   display: flex;
   flex-direction: column;
   height: 50%;
   margin: 1.5em 0.5em;
 }
-.phoneInput {
+.main-container .form-container > span {
+  font-size: 0.6rem;
+  color: #3333ff;
+  padding-left: 2.5em;
+  font-family: "Poppins", sans-serif;
+}
+.main-container .form-container .user-info-card-display {
+  display: flex;
+  flex-direction: column;
+}
+.main-container .form-container .submition-message {
+  height: 5rem;
+}
+.main-container .phoneInput {
   margin: 1em 2em 0.3em 2em;
   height: 2em;
   border: none;
   outline: none;
+  border-bottom: 0.2em solid #b3b3cc;
+  font-family: "Poppins", sans-serif;
 }
-.form-container span {
-  font-size: 0.6rem;
-  color: #3333ff;
-  padding-left: 2.5em;
-  font-family: 'Poppins', sans-serif;
+.main-container .phoneInput .phoneInput:focus {
+  border-bottom: 0.3em solid;
+  border-image: linear-gradient(to left, #00ccff, #cc33ff) 1;
 }
-.user-info-card-display {
-  display: flex;
-  flex-direction: column;
-}
-.submition-message {
-  border: 2px solid orange;
-  height: 5rem;
-  color: green;
-}
-.react-datepicker__input-container input {
+.main-container .react-datepicker__input-container input {
   /* background-color: yellow; */
   height: 2em;
   width: 100%;
@@ -109,43 +113,43 @@ p {
   outline: none;
   font-family: "Poppins", sans-serif;
 }
-.react-datepicker__input-container input:focus {
+.main-container .react-datepicker__input-container input:focus {
   border-image: linear-gradient(to left, #00ccff, #cc33ff) 1;
   border-bottom: 0.3em solid;
 }
-.react-datepicker-wrapper {
+.main-container .react-datepicker-wrapper {
   margin: 1em 1.5em;
 }
-div.react-datepicker {
+.main-container div.react-datepicker {
   font-family: "Poppins", sans-serif;
   height: 300px;
 }
-div.react-datepicker__header {
+.main-container div.react-datepicker__header {
   height: 90px;
 }
-div.react-datepicker__day-names {
+.main-container div.react-datepicker__day-names {
   margin-top: 20px;
 }
-span.react-datepicker__year-read-view--down-arrow {
+.main-container span.react-datepicker__year-read-view--down-arrow {
   color: blue;
 }
-span.react-datepicker__year-read-view--selected-year {
+.main-container span.react-datepicker__year-read-view--selected-year {
   padding: 0;
 }
-span.react-datepicker__year-read-view--down-arrow {
+.main-container span.react-datepicker__year-read-view--down-arrow {
   padding: 0;
 }
-#root > div > div > form > div.react-datepicker__tab-loop > div.react-datepicker-popper > div > div > button.react-datepicker__navigation.react-datepicker__navigation--next {
+.main-container #root > div > div > form > div.react-datepicker__tab-loop > div.react-datepicker-popper > div > div > button.react-datepicker__navigation.react-datepicker__navigation--next {
   color: darkgoldenrod;
 }
-span.react-span {
+.main-container span.react-span {
   font-family: "Poppins", sans-serif;
   color: #999999;
   font-size: 0.9rem;
   font-weight: 400;
   padding-left: 1.6em;
 }
-button.button {
+.main-container button.button {
   margin-bottom: 5em;
 }
 /*# sourceMappingURL=form.css.map */

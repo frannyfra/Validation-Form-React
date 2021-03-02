@@ -4,98 +4,103 @@
   display: flex;
   flex-direction: column;
   height: auto;
-}
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    margin: 1.5em 0.5em;
+    & > span {
+      font-size: 0.6rem;
+      color: #3333ff;
+      padding-left: 2.5em;
+      font-family: "Poppins", sans-serif;
+    }
+    .user-info-card-display {
+      display: flex;
+      flex-direction: column;
+    }
+    .submition-message {
+      height: 5rem;
+    }
+  }
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-  height: 50%;
-  margin: 1.5em 0.5em;
-}
+  .phoneInput {
+    margin: 1em 2em 0.3em 2em;
+    height: 2em;
+    border: none;
+    outline: none;
+    border-bottom: 0.2em solid @color-second;
+    font-family: "Poppins", sans-serif;
+    .phoneInput:focus {
+      border-bottom: 0.3em solid;
+      border-image: @gradient-color;
+    }
+  }
+  // style react library
+  .react-datepicker__input-container input {
+    /* background-color: yellow; */
+    height: 2em;
+    width: 100%;
+    border: none;
+    border-bottom: 0.2em solid #b3b3cc;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    &:focus {
+      border-image: linear-gradient(to left, #00ccff, #cc33ff) 1;
+      border-bottom: 0.3em solid;
+    }
+  }
 
-.phoneInput {
-  margin: 1em 2em 0.3em 2em;
-  height: 2em;
-  border: none;
-  outline: none;
-}
+  .react-datepicker-wrapper {
+    margin: 1em 1.5em;
+  }
 
-.form-container span {
-  font-size: 0.6rem;
-  color: #3333ff;
-  padding-left: 2.5em;
-  font-family: 'Poppins', sans-serif;
-}
+  div.react-datepicker {
+    font-family: "Poppins", sans-serif;
+    height: 300px;
+  }
 
-.user-info-card-display {
-  display: flex;
- flex-direction: column;
-}
+  div.react-datepicker__header {
+    height: 90px;
+  }
 
-.submition-message {
-  border: 2px solid orange;
-  height: 5rem;
-  color: green;
-}
+  div.react-datepicker__day-names {
+    margin-top: 20px;
+  }
 
-.react-datepicker__input-container input{
-  /* background-color: yellow; */
-  height: 2em;
-  width: 100%;
-  border: none;
-  border-bottom: 0.2em solid #b3b3cc;
-  outline: none;
-  font-family: "Poppins", sans-serif;
-}
+  span.react-datepicker__year-read-view--down-arrow {
+    color: blue;
+  }
 
-.react-datepicker__input-container input:focus {
-  border-image: linear-gradient(to left, #00ccff, #cc33ff) 1;
-  border-bottom: 0.3em solid;
-}
+  span.react-datepicker__year-read-view--selected-year {
+    padding: 0;
+  }
 
-.react-datepicker-wrapper {
-  margin:1em 1.5em;
-}
+  span.react-datepicker__year-read-view--down-arrow {
+    padding: 0;
+  }
 
+  #root
+    > div
+    > div
+    > form
+    > div.react-datepicker__tab-loop
+    > div.react-datepicker-popper
+    > div
+    > div
+    > button.react-datepicker__navigation.react-datepicker__navigation--next {
+    color: darkgoldenrod;
+  }
 
+  span.react-span {
+    font-family: "Poppins", sans-serif;
+    color: #999999;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-left: 1.6em;
+  }
 
-div.react-datepicker {
-  font-family: "Poppins", sans-serif;
-  height: 300px;
-}
-
-div.react-datepicker__header {
-height: 90px;
-}
-
-div.react-datepicker__day-names {
-  margin-top : 20px;
-}
-
-span.react-datepicker__year-read-view--down-arrow{
-  color: blue;
-}
-
-span.react-datepicker__year-read-view--selected-year {
-  padding: 0;
-}
-
-span.react-datepicker__year-read-view--down-arrow {
-  padding: 0;
-}
-
-#root > div > div > form > div.react-datepicker__tab-loop > div.react-datepicker-popper > div > div > button.react-datepicker__navigation.react-datepicker__navigation--next {
-  color: darkgoldenrod;
-}
-
-span.react-span {
-  font-family: "Poppins", sans-serif;
-  color:  #999999;
-  font-size: 0.9rem;
-  font-weight: 400;
-  padding-left: 1.6em;
-}
-
-button.button {
-  margin-bottom: 5em;
+  button.button {
+    margin-bottom: 5em;
+  }
 }
