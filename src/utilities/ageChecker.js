@@ -1,5 +1,4 @@
 export const ageChecker = (age) => {
-
     if (age !== undefined) {
         if (age > 99) {
             return <span>Submission Unsuccessful<br /> Required age is between 18 and 99 years older </span>;

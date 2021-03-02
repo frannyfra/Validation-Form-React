@@ -1,5 +1,4 @@
 export const textValidation = (text) => {
-    console.log(text, "im the text")
     let message;
     if (text !== undefined) {
         if (text === "" || text.trim() === "") {
