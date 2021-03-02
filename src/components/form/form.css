@@ -81,7 +81,7 @@ p {
 }
 .phoneInput {
   margin: 1em 2em 0.3em 2em;
-  height: 2rem;
+  height: 2em;
   border: none;
   outline: none;
 }
@@ -89,16 +89,19 @@ p {
   font-size: 0.6rem;
   color: #3333ff;
   padding-left: 2.5em;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .user-info-card-display {
   display: flex;
   flex-direction: column;
 }
 .submition-message {
+  border: 2px solid orange;
   height: 5rem;
+  color: green;
 }
 .react-datepicker__input-container input {
+  /* background-color: yellow; */
   height: 2em;
   width: 100%;
   border: none;

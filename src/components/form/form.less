@@ -1,4 +1,4 @@
-@import "./../../App.less";
+@import "./../../App";
 
 .main-container {
   display: flex;
@@ -15,32 +15,35 @@
 
 .phoneInput {
   margin: 1em 2em 0.3em 2em;
-  height: @size-1rem + @size-1rem;
+  height: 2em;
   border: none;
   outline: none;
 }
 
 .form-container span {
   font-size: 0.6rem;
-  color: @color-first;
+  color: #3333ff;
   padding-left: 2.5em;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .user-info-card-display {
   display: flex;
-  flex-direction: column;
+ flex-direction: column;
 }
 
 .submition-message {
+  border: 2px solid orange;
   height: 5rem;
+  color: green;
 }
 
-.react-datepicker__input-container input {
+.react-datepicker__input-container input{
+  /* background-color: yellow; */
   height: 2em;
   width: 100%;
   border: none;
-  border-bottom: 0.2em solid @color-second;
+  border-bottom: 0.2em solid #b3b3cc;
   outline: none;
   font-family: "Poppins", sans-serif;
 }
@@ -51,8 +54,10 @@
 }
 
 .react-datepicker-wrapper {
-  margin: 1em 1.5em;
+  margin:1em 1.5em;
 }
+
+
 
 div.react-datepicker {
   font-family: "Poppins", sans-serif;
@@ -60,14 +65,14 @@ div.react-datepicker {
 }
 
 div.react-datepicker__header {
-  height: 90px;
+height: 90px;
 }
 
 div.react-datepicker__day-names {
-  margin-top: 20px;
+  margin-top : 20px;
 }
 
-span.react-datepicker__year-read-view--down-arrow {
+span.react-datepicker__year-read-view--down-arrow{
   color: blue;
 }
 
@@ -79,21 +84,13 @@ span.react-datepicker__year-read-view--down-arrow {
   padding: 0;
 }
 
-#root
-  > div
-  > div
-  > form
-  > div.react-datepicker__tab-loop
-  > div.react-datepicker-popper
-  > div
-  > div
-  > button.react-datepicker__navigation.react-datepicker__navigation--next {
+#root > div > div > form > div.react-datepicker__tab-loop > div.react-datepicker-popper > div > div > button.react-datepicker__navigation.react-datepicker__navigation--next {
   color: darkgoldenrod;
 }
 
 span.react-span {
   font-family: "Poppins", sans-serif;
-  color: #999999;
+  color:  #999999;
   font-size: 0.9rem;
   font-weight: 400;
   padding-left: 1.6em;

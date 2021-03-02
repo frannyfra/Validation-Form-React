@@ -1,10 +1,77 @@
-/* $gradient: linear-gradient(to right, blue, indigo, violet); */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLFj_V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
+}
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+body {
+  background-color: #ffffff;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+.App {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+h1 {
+  text-align: center;
+  color: #000000;
+  margin: 0;
+  padding: 2rem 0 1.5rem 0;
+  font-size: 2rem;
+}
+p {
+  font-weight: 300;
+}
 .form-input-container {
-  /* align-self: center; */
-  background: red;
   margin: 1em 1.5em;
 }
-input {
+.form-input-container input {
   height: 2em;
   width: 100%;
   border: none;
@@ -12,11 +79,11 @@ input {
   outline: none;
   font-family: "Poppins", sans-serif;
 }
-input:focus {
+.form-input-container input:focus {
   border-image: linear-gradient(to left, #00ccff, #cc33ff) 1;
   border-bottom: 0.3em solid;
 }
-::placeholder {
+.form-input-container input:focus ::placeholder {
   font-family: "Poppins", sans-serif;
   color: #999999;
   font-size: 0.9rem;
@@ -24,25 +91,18 @@ input:focus {
   opacity: 1;
   /* Firefox */
 }
-:-ms-input-placeholder {
+.form-input-container input:focus ::placeholder :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   font-family: "Poppins", sans-serif;
   color: #999999;
   font-size: 0.9rem;
   font-weight: 400;
 }
-::-ms-input-placeholder {
+.form-input-container input:focus ::placeholder ::-ms-input-placeholder {
   /* Microsoft Edge */
   font-family: "Poppins", sans-serif;
   color: #999999;
   font-size: 0.9rem;
   font-weight: 400;
 }
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {
-    .form-input-container {
-      margin: auto;
-      align-self: center;
-    }
-  } */
 /*# sourceMappingURL=formInput.css.map */

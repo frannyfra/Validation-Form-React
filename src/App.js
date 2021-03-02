@@ -1,6 +1,7 @@
 import './App.css';
 import "./components/form/formInput/formInput.less";
 import Form from "./../src/components/form/Form";
+import "./../src/components/form/form.less";
 
 function App() {
   return (

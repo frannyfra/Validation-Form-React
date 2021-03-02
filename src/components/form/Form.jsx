@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./form.css";
 import FormInput from "./../../components/form/formInput/FormInput";
 import Button from "./../button/Button";
 import UserCardInfo from "./../user-card-info/UserCardInfo";

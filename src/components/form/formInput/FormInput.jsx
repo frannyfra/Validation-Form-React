@@ -1,5 +1,5 @@
 import React from "react";
-import "./formInput.less";
+import "./formInput.css";
 
 const FormInput =({name, onChange, placeholder, type, value}) => {
     return (
