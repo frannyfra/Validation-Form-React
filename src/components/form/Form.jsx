@@ -81,13 +81,10 @@ const Form = () => {
   };
 
   const handlePhoneInput = event => {
-    console.log(event);
     const formatNumber = formatPhoneNumberIntl(event);
-    console.log(formatNumber);
     setValue(formatNumber);
 
     const checkValidNumber = isValidPhoneNumber(formatNumber);
-    console.log(checkValidNumber, "valid numnber?");
     setValidValue(checkValidNumber);
   };
 
